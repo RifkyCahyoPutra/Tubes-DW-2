@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS pakai input.css */
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+
+
+header {
+    background: #333;
+    background-image: url("wuthering\ waves\ background.png");
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header img {
+    max-width: 200px;
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+
+
+section {
+    /*buat garis warna di pinggir menggunakan border di section*/
+    border: 5px solid black;
+    outline-style: solid;
+    outline-color: rgb(23, 37, 114);
+
+    overflow: hidden;
+    border-spacing: 5px;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.trailer, .event {
+    margin: 10px 0;
+}
+
+.trailer img, .event img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
+
+
+  .characters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .character {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #fff;
+    background-color: #282828;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .character img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .character .element {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  /* elemen icon masing-masing character*/
+  .character .element.Electro {
+    background-image: url("element/Electro.webp");
+    background-size: cover;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .character .element.Havoc {
+    background-image: url("element/Havoc.webp");
+    background-size: cover;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .character .element.Fusion {
+    background-image: url("element/Fusion.webp");
+    background-size: cover;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .character .element.Fusion {
+    background-image: url("element/Fusion.webp");
+    background-size: cover;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .character .element.Aero {
+    background-image: url("element/Aero.webp");
+    background-size: cover;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .character .element.Spectro {
+    background-image: url("element/Spectro.webp");
+    background-size: cover;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .character .element.Aero {
+    background-image: url("element/Aero.webp");
+    background-size: cover;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .character .element.Glacio {
+    background-image: url("element/Glacio.webp");
+    background-size: cover;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /*nama karakter*/
+  .character .name {
+    position: absolute;
+    bottom: 10px;
+    left:  10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
