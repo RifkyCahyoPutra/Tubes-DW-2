@@ -68,12 +68,13 @@ section {
 
 
 .trailer, .event {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .trailer img, .event img {
-    max-width: 100%;
-    border-radius: 5px;
+  justify-content: center;
+  max-width: 100%;
+  border-radius: 5px;
 }
 
 footer {
@@ -187,3 +188,72 @@ footer {
     color: #ffffff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   }
+  
+
+
+
+/* Background dan warna tema */
+
+/* Judul dan subjudul */
+h2 {
+  color: #121212; /* Warna terang untuk judul */
+  font-size: 1.875rem; /* Ukuran 3xl */
+  font-weight: 700; /* Bold */
+}
+
+p {
+  color: #121212; /* Warna teks subjudul */
+  font-family: "Georgia", serif; /* Gaya font serif */
+  font-size: 0.9rem; /* Ukuran teks kecil */
+}
+
+/* Artikel grid */
+article {
+  background-color: #2D3748; /* Warna kartu gelap */
+  border-radius: 0.5rem; /* Sudut membulat */
+  overflow: hidden; /* Menjaga elemen tetap di dalam kartu */
+}
+
+article img {
+  width: 100%;
+  height: 13rem; /* Sesuaikan tinggi gambar */
+  object-fit: cover; /* Menjaga proporsi gambar */
+  background-color: #4A5568; /* Placeholder jika gambar gagal dimuat */
+}
+
+article .text-xs {
+  color: #805AD5; /* Warna ungu untuk teks kecil */
+}
+
+article h3 {
+  color: #E2E8F0; /* Teks judul artikel */
+  font-size: 1.125rem; /* Ukuran teks lg */
+  font-weight: 600; /* Semi-bold */
+}
+
+article .text-xs span {
+  color: #A0AEC0; /* Warna untuk tanggal dan views */
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  gap: 2rem; /* Jarak antar kartu */
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
