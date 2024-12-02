@@ -10,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: #17153b;
 }
 
 
@@ -59,7 +59,7 @@ section {
     overflow: hidden;
     border-spacing: 5px;
     margin-bottom: 20px;
-    background: #fff;
+    background: #433d8b;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -226,9 +226,9 @@ article .text-xs {
 }
 
 article h3 {
-  color: #E2E8F0; /* Teks judul artikel */
-  font-size: 1.125rem; /* Ukuran teks lg */
-  font-weight: 600; /* Semi-bold */
+  color: #ffffff; /* Changed from #E2E8F0 to white */
+  font-size: 1.125rem;
+  font-weight: 600; /* Already semi-bold */
 }
 
 article .text-xs span {
@@ -262,21 +262,21 @@ article .text-xs span {
 /* Container utama */
 .container {
   display: grid;
-  grid-template-rows: auto auto; /* Baris untuk elemen atas dan bawah */
+  grid-template-rows: auto auto;
   gap: 2rem;
   padding: 2rem;
+  background-color: #2e236c;
 }
 
-/* Elemen besar di atas */
 .featured {
   display: flex;
   gap: 1rem;
 }
 
 .featured img {
-  width: 60%; /* Gambar besar, 60% dari lebar */
+  width: 60%; 
   border-radius: 8px;
-  background-color: #4A5568; /* Placeholder untuk gambar */
+  background-color: #4A5568; 
 }
 
 .featured .text {
@@ -342,4 +342,8 @@ article .text-xs span {
 .card .date {
   font-size: 0.8rem;
   color: #718096; /* Warna teks lebih redup */
+}
+
+.trailer h1 {
+    color: #ffffff; /* Change the color to white */
 }
