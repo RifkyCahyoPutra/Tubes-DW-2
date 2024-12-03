@@ -67,7 +67,7 @@ section {
 
 section p a {
   text-decoration: none;
-  color: #ffffff;
+  color:#caa205;
   font-weight: bold;
 }
 
@@ -202,13 +202,13 @@ footer {
 
 /* Judul dan subjudul */
 h2 {
-  color: #121212; /* Warna terang untuk judul */
+  color: #ffffff; /* Changed from #121212 to white */
   font-size: 1.875rem; /* Ukuran 3xl */
   font-weight: 700; /* Bold */
 }
 
 p {
-  color: #121212; /* Warna teks subjudul */
+  color: #ffffff; /* Changed from #121212 to white */
   font-family: "Georgia", serif; /* Gaya font serif */
   font-size: 0.9rem; /* Ukuran teks kecil */
 }
@@ -352,4 +352,159 @@ article .text-xs span {
 
 .trailer h1 {
     color: #ffffff; /* Change the color to white */
+}
+
+/* Base responsive styles */
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .featured {
+    flex-direction: column;
+  }
+  
+  .featured img {
+    width: 100%;
+  }
+  
+  .featured .text {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  section {
+    padding: 10px;
+  }
+  
+  .characters {
+    gap: 8px;
+  }
+  
+  .character {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 15px 0;
+  }
+  
+  header img {
+    max-width: 150px;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  nav ul li {
+    margin: 5px 0;
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .card {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .characters {
+    gap: 6px;
+  }
+  
+  .character {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .character .name {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    padding: 10px;
+  }
+  
+  section {
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .character {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .character .element {
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: 5px;
+  }
+  
+  .character .name {
+    font-size: 11px;
+    bottom: 5px;
+    left: 5px;
+  }
+  
+  .card {
+    max-width: 100%;
+  }
+  
+  .card img {
+    height: 120px;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  p {
+    font-size: 0.85rem;
+  }
+}
+
+/* For very small devices */
+@media screen and (max-width: 320px) {
+  .character {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .character .name {
+    font-size: 10px;
+  }
+  
+  header img {
+    max-width: 120px;
+  }
+  
+  h2 {
+    font-size: 1.1rem;
+  }
 }
