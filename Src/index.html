@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="input.css">
     <title>Wuthering Waves Wiki</title>
     
+    <!-- Tambahkan script Google API -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHGWNPyje67GIDF1eeLV089Az0JyYdj2w&callback=initMap">
+    </script>
+    
     <style>
         @media (max-width: 600px) {
             header {
@@ -47,7 +52,7 @@
             <h2>About Wuthering Waves</h2>
             <p><strong><em><a href="https://en.wikipedia.org/wiki/Wuthering_Waves">Wuthering Waves</a></em> is a story-rich open-world action RPG with a high degree of freedom from <a href="https://en.wikipedia.org/wiki/Kuro_Games">Kuro Game</a>. You wake from your slumber as <a href="/wiki/Rover">Rover</a>, joined by a vibrant cast of <a href="/wiki/Resonators">Resonators</a> on a journey to reclaim your lost memories and surmount <a href="/wiki/The_Lament">the Lament</a>.</strong></p>
             <p><strong>This wiki is an unofficial English resource for information about the global version of the game, and currently has <strong>2,787 articles</strong> and <strong>16,200 images & videos.</strong></strong></p>
-           
+            
         </section>
 
         <section class="py-6 sm:py-12 dark:bg-gray-100 dark:text-gray-800">
@@ -56,69 +61,12 @@
                     <h1 class="text-3xl font-semibold text-white">Trailer</h1>
                 </div>
 
-                <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-                    <article class="flex flex-col dark:bg-gray-50">
-                        <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
-                            <img alt="" class="object-cover w-full h-52 dark:bg-gray-500" src="https://i.ytimg.com/vi/xOn_aOXq1ZY/maxresdefault.jpg">
-                        </a>
-                        <div class="flex flex-col flex-1 p-6">
-                            <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=xOn_aOXq1ZY&t=61s" class="text-xs tracking-wider uppercase hover:underline dark:text-violet-600">Link Youtube</a>
-                            <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Opening Cinematics - Set Sail</h3>
-                            <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-600">
-                                <span>413K views</span>
-                                <span>9 months ago </span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="flex flex-col dark:bg-gray-50">
-                        <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
-                            <img alt="" class="object-cover w-full h-52 dark:bg-gray-500" src="https://i.ytimg.com/vi/hRhVca9Aeu4/maxresdefault.jpg">
-                        </a>
-                        <div class="flex flex-col flex-1 p-6">
-                            <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
-                            <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=R8htow_6tRc  class=" class="text-xs tracking-wider uppercase hover:underline dark:text-violet-600">Link Youtube</a>
-                            <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Wuthering Waves Global Launch Trailer - WAKING OF A WORLD</h3>
-                            <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-600">
-                                <span>413.759 views</span>
-                                <span>18 Feb 2024</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="flex flex-col dark:bg-gray-50">
-                        <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
-                            <img alt="" class="object-cover w-full h-52 dark:bg-gray-500" src="https://i.ytimg.com/vi/4i1IRQ6SGTM/maxresdefault.jpg">
-                        </a>
-                        <div class="flex flex-col flex-1 p-6">
-                            <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
-                            <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=4i1IRQ6SGTM" class="text-xs tracking-wider uppercase hover:underline dark:text-violet-600">Link Youtube</a>
-                            <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Wuthering Waves Featured Cinematics - SAVING LIGHT</h3>
-                            <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-600">
-                                <span>2,963,251 views</span>
-                                <span>Mar 29, 2024 </span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="flex flex-col dark:bg-gray-50">
-                        <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
-                            <img alt="" class="object-cover w-full h-52 dark:bg-gray-500" src="https://hw-media-cdn-mingchao.kurogame.com/akiwebsite/website2.0/images/1731340800000/mlv4yv5dthpq0q8hvh-1731404711547.png">
-                        </a>
-                        <div class="flex flex-col flex-1 p-6">
-                            <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
-                            <a rel="noopener noreferrer" href="https://youtu.be/LS0XD_nEtdw?si=zjJvCh_CryWkwLxS" class="text-xs tracking-wider uppercase hover:underline dark:text-violet-600">Link Youtube</a>
-                            <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Wuthering Waves Version 1.4 Official Trailer | When the Night Knocks</h3>
-                            <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-600">
-                                <span>1,330,964 views</span>
-                                <span>Nov 4, 2024</span>
-                            </div>
-                        </div>
-                    </article>
+                <!-- Add container for YouTube videos -->
+                <div id="videoContainer" class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+                    <!-- Videos will be populated here -->
                 </div>
             </div>
         </section>
-
 
         <section>
             <h2>Current Events</h2>
@@ -223,5 +171,76 @@
     <footer>
         <p>&copy; 2024 Wuthering Waves Wiki. All rights reserved.</p>
     </footer>
+
+    <!-- Add JavaScript to load videos -->
+    <script>
+        // Array of video IDs
+        const videoIds = [
+            'xOn_aOXq1ZY',  // Opening Cinematics
+            'R8htow_6tRc',  // Global Launch Trailer
+            '4i1IRQ6SGTM',  // SAVING LIGHT
+            'LS0XD_nEtdw'   // Version 1.4
+        ];
+
+        function initMap() {
+            // Initialize YouTube API
+            const container = document.getElementById('videoContainer');
+            
+            videoIds.forEach(videoId => {
+                // Create request to get video details
+                gapi.client.youtube.videos.list({
+                    part: 'snippet,statistics',
+                    id: videoId
+                }).then(response => {
+                    const video = response.result.items[0];
+                    const article = createVideoArticle(video);
+                    container.appendChild(article);
+                }).catch(err => console.error('Error loading video:', err));
+            });
+        }
+
+        function createVideoArticle(video) {
+            const article = document.createElement('article');
+            article.className = 'flex flex-col dark:bg-gray-50';
+            
+            article.innerHTML = `
+                <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=${video.id}" target="_blank">
+                    <img alt="${video.snippet.title}" class="object-cover w-full h-52 dark:bg-gray-500" 
+                         src="${video.snippet.thumbnails.maxres?.url || video.snippet.thumbnails.high.url}">
+                </a>
+                <div class="flex flex-col flex-1 p-6">
+                    <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=${video.id}" 
+                       class="text-xs tracking-wider uppercase hover:underline dark:text-violet-600" target="_blank">
+                        Link Youtube
+                    </a>
+                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">${video.snippet.title}</h3>
+                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-600">
+                        <span>${parseInt(video.statistics.viewCount).toLocaleString()} views</span>
+                        <span>${new Date(video.snippet.publishedAt).toLocaleDateString()}</span>
+                    </div>
+                </div>
+            `;
+            
+            return article;
+        }
+
+        // Load YouTube API
+        function loadYouTubeAPI() {
+            gapi.client.init({
+                'apiKey': 'AIzaSyDHGWNPyje67GIDF1eeLV089Az0JyYdj2w',
+                'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest']
+            }).then(() => {
+                initMap();
+            }).catch(err => console.error('Error initializing YouTube API:', err));
+        }
+
+        // Add YouTube API client library
+        const script = document.createElement('script');
+        script.src = 'https://apis.google.com/js/api.js';
+        script.onload = () => {
+            gapi.load('client', loadYouTubeAPI);
+        };
+        document.head.appendChild(script);
+    </script>
 </body>
 </html>
