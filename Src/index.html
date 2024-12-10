@@ -27,59 +27,6 @@
                 margin-bottom: 10px;
             }
         }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 16px;
-        }
-
-        .character {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .character img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 16px;
-            }
-
-            .header div {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .header h1 {
-                position: static;
-                transform: none;
-                margin-top: 10px;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header img {
-                width: 80%;
-            }
-
-            .nav ul {
-                padding: 0;
-            }
-
-            .nav ul li {
-                margin-bottom: 5px;
-            }
-        }
     </style>
 </head>
 
