@@ -10,13 +10,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #17153b;
+    background-color: #4d4b4b;
 }
 
 
 
 header {
-    background: #333;
+    background: #7c7979;
     background-image: url("wuthering\ waves\ background.png");
     color: #ffffff;
     padding: 20px 0;
@@ -54,12 +54,12 @@ section {
     /*buat garis warna di pinggir menggunakan border di section*/
     border: 5px solid black;
     outline-style: solid;
-    outline-color: rgb(23, 37, 114);
+    outline-color: rgb(53, 53, 56);
 
     overflow: hidden;
     border-spacing: 5px;
     margin-bottom: 20px;
-    background: #433d8b;
+    background: #222121;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -67,7 +67,7 @@ section {
 
 section p a {
   text-decoration: none;
-  color:#caa205;
+  color:#96843c;
   font-weight: bold;
 }
 
@@ -228,7 +228,7 @@ article img {
 }
 
 article .text-xs {
-  color: #805AD5; /* Warna ungu untuk teks kecil */
+  color: #353535; /* Warna ungu untuk teks kecil */
 }
 
 article h3 {
@@ -271,7 +271,7 @@ article .text-xs span {
   grid-template-rows: auto auto;
   gap: 2rem;
   padding: 2rem;
-  background-color: #2e236c;
+  background-color: #303030;
 }
 
 .featured {
@@ -350,8 +350,8 @@ article .text-xs span {
   color: #718096; /* Warna teks lebih redup */
 }
 
-.trailer h1 {
-    color: #ffffff; /* Change the color to white */
+.Trailer h1 {
+    color: #e9e9e9; 
 }
 
 /* Base responsive styles */
