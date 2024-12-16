@@ -530,3 +530,30 @@ article .text-xs span {
     float: right;
     margin: 0 0 18px 18px;
 }
+
+/*tabel list karakter*/
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
