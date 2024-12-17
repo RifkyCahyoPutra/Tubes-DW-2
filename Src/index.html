@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unofficial Wuthering Waves Wiki - Your comprehensive guide to characters, items, and more">
+    <meta name="theme-color" content="#2D3748">
+    <link rel="icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="input.css">
     <title>Wuthering Waves Wiki</title>
     
@@ -33,7 +36,7 @@
 <body>
     <header>
         <h1>Welcome to Wuthering Waves Wiki!</h1>
-        <img src="Wuthering Waves logo.svg" alt="Site Logo">
+        <img src="assets/Wuthering Waves logo.svg" alt="Site Logo">
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
@@ -134,42 +137,42 @@
             <h1>Wuthering Waves Characters</h1>
             <div class="characters">
               <div class="character">
-                <img src="Character/Calcharo_Icon.webp" alt="Calcharo">
+                <img src="assets/Character/Calcharo_Icon.webp" alt="Calcharo" loading="lazy">
                 <div class="element Electro"></div>
                 <div class="name">Calcharo</div>
               </div>
               <div class="character">
-                <img src="Character/Camellya_Icon.webp" alt="Camellya">
+                <img src="Character/Camellya_Icon.webp" alt="Camellya" loading="lazy">
                 <div class="element Havoc"></div>
                 <div class="name">Camellya</div>
               </div>
               <div class="character">
-                <img src="Character/Changli_Icon.webp" alt="Changli">
+                <img src="Character/Changli_Icon.webp" alt="Changli" loading="lazy">
                 <div class="element Fusion"></div>
                 <div class="name">Changli</div>
               </div>
               <div class="character">
-                <img src="Character/Encore_Icon.webp" alt="Encore">
+                <img src="Character/Encore_Icon.webp" alt="Encore" loading="lazy">
                 <div class="element Fusion"></div>
                 <div class="name">Encore</div>
               </div>
               <div class="character">
-                <img src="Character/Jianxin_Icon.webp" alt="Jianxin">
+                <img src="Character/Jianxin_Icon.webp" alt="Jianxin" loading="lazy">
                 <div class="element Aero"></div>
                 <div class="name">Jianxin</div>
               </div>
               <div class="character">
-                <img src="Character/Jinhsi_Icon.webp" alt="Jinhsi">
+                <img src="Character/Jinhsi_Icon.webp" alt="Jinhsi" loading="lazy">
                 <div class="element Spectro"></div>
                 <div class="name">Jinhsi</div>
               </div>
               <div class="character">
-                <img src="Character/Jiyan_Icon.webp" alt="Jiyan">
+                <img src="Character/Jiyan_Icon.webp" alt="Jiyan" loading="lazy">
                 <div class="element Aero"></div>
                 <div class="name">Jiyan</div>
               </div>
               <div class="character">
-                <img src="Character/Lingyang_Icon.webp" alt="lingyang">
+                <img src="Character/Lingyang_Icon.webp" alt="lingyang" loading="lazy">
                 <div class="element Glacio"></div>
                 <div class="name">Lingyang</div>
               </div>
@@ -184,22 +187,20 @@
         <p>&copy; 2024 Wuthering Waves Wiki. All rights reserved.</p>
     </footer>
 
-    <!-- Add JavaScript to load videos -->
     <script>
-        // Array of video IDs
         const videoIds = [
-            'xOn_aOXq1ZY',  // Opening Cinematics
-            'R8htow_6tRc',  // Global Launch Trailer
-            '4i1IRQ6SGTM',  // SAVING LIGHT
-            'LS0XD_nEtdw'   // Version 1.4
+            'xOn_aOXq1ZY',  
+            'R8htow_6tRc',  
+            '4i1IRQ6SGTM',  
+            'LS0XD_nEtdw'   
         ];
 
         function initMap() {
-            // Initialize YouTube API
+            
             const container = document.getElementById('videoContainer');
             
             videoIds.forEach(videoId => {
-                // Create request to get video details
+                
                 gapi.client.youtube.videos.list({
                     part: 'snippet,statistics',
                     id: videoId
@@ -236,7 +237,6 @@
             return article;
         }
 
-        // Load YouTube API
         function loadYouTubeAPI() {
             gapi.client.init({
                 'apiKey': 'AIzaSyDHGWNPyje67GIDF1eeLV089Az0JyYdj2w',
@@ -246,7 +246,6 @@
             }).catch(err => console.error('Error initializing YouTube API:', err));
         }
 
-        // Add YouTube API client library
         const script = document.createElement('script');
         script.src = 'https://apis.google.com/js/api.js';
         script.onload = () => {
