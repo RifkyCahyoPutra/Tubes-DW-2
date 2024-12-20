@@ -723,6 +723,8 @@ header {
 .logo-title img {
   height: 100px;
   width: auto;
+  align-items: center;
+  gap: 15px;
 }
 
 nav ul.nav-list {
@@ -756,8 +758,6 @@ nav ul.nav-list li a:hover {
       gap: 10px;
   }
 }
-
-
 
 /* Style utama untuk blockquote */
 blockquote.pull-quote {
