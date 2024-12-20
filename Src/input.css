@@ -2,7 +2,158 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CSS pakai input.css */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.characters {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.character {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.character:hover {
+  transform: translateY(-5px);
+}
+
+.character img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .featured {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #2D3748;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+table {
+  min-width: 100%;
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+  
+  td, th {
+    padding: 8px;
+  }
+}
+
+.character .element {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-size: contain;
+}
+
+header {
+  padding: 1rem;
+}
+
+header img {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  header img {
+    max-width: 200px;
+  }
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+@media (max-width: 576px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 
 
@@ -126,7 +277,6 @@ footer {
     border-radius: 50%;
   }
   
-  /* elemen icon masing-masing character*/
   .character .element.Electro {
     background-image: url("element/Electro.webp");
     background-size: cover;
@@ -198,53 +348,49 @@ footer {
 
 
 
-/* Background dan warna tema */
-
-/* Judul dan subjudul */
 h2 {
-  color: #ffffff; /* Changed from #121212 to white */
-  font-size: 1.875rem; /* Ukuran 3xl */
-  font-weight: 700; /* Bold */
+  color: #ffffff;
+  font-size: 1.875rem; 
+  font-weight: 700; 
 }
 
 p {
-  color: #ffffff; /* Changed from #121212 to white */
-  font-family: "Georgia", serif; /* Gaya font serif */
-  font-size: 0.9rem; /* Ukuran teks kecil */
+  color: #ffffff; 
+  font-family: "Georgia", serif; 
+  font-size: 0.9rem; 
 }
 
-/* Artikel grid */
+
 article {
-  background-color: #2D3748; /* Warna kartu gelap */
-  border-radius: 0.5rem; /* Sudut membulat */
-  overflow: hidden; /* Menjaga elemen tetap di dalam kartu */
+  background-color: #2D3748; 
+  border-radius: 0.5rem; 
+  overflow: hidden; 
 }
 
 article img {
   width: 100%;
-  height: 13rem; /* Sesuaikan tinggi gambar */
-  object-fit: cover; /* Menjaga proporsi gambar */
-  background-color: #4A5568; /* Placeholder jika gambar gagal dimuat */
+  height: 13rem; 
+  object-fit: cover; 
+  background-color: #4A5568; 
 }
 
 article .text-xs {
-  color: #353535; /* Warna ungu untuk teks kecil */
+  color: #353535; 
 }
 
 article h3 {
-  color: #ffffff; /* Changed from #E2E8F0 to white */
+  color: #ffffff; 
   font-size: 1.125rem;
-  font-weight: 600; /* Already semi-bold */
+  font-weight: 600; 
 }
 
 article .text-xs span {
-  color: #A0AEC0; /* Warna untuk tanggal dan views */
+  color: #A0AEC0;
 }
 
-/* Grid layout */
 .grid {
   display: grid;
-  gap: 2rem; /* Jarak antar kartu */
+  gap: 2rem; 
 }
 
 .grid-cols-4 {
@@ -264,8 +410,6 @@ article .text-xs span {
 }
 
 
-
-/* Container utama */
 .container {
   display: grid;
   grid-template-rows: auto auto;
@@ -286,7 +430,7 @@ article .text-xs span {
 }
 
 .featured .text {
-  width: 40%; /* Kontainer teks */
+  width: 40%; 
 }
 
 .featured h2 {
@@ -296,20 +440,19 @@ article .text-xs span {
 }
 
 .featured p {
-  color: #A0AEC0; /* Warna teks tambahan */
+  color: #A0AEC0; 
   line-height: 1.6;
 }
 
 .featured .date {
   font-size: 0.9rem;
-  color: #718096; /* Warna teks lebih redup */
+  color: #718096; 
   margin-bottom: 1rem;
 }
 
-/* Grid item kecil di bawah */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 1rem;
 }
 
@@ -325,7 +468,7 @@ article .text-xs span {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  background-color: #4A5568; /* Placeholder untuk gambar */
+  background-color: #4A5568; 
 }
 
 .card .content {
@@ -340,21 +483,20 @@ article .text-xs span {
 
 .card p {
   font-size: 0.9rem;
-  color: #A0AEC0; /* Warna teks tambahan */
+  color: #A0AEC0; 
   line-height: 1.5;
   margin-bottom: 1rem;
 }
 
 .card .date {
   font-size: 0.8rem;
-  color: #718096; /* Warna teks lebih redup */
+  color: #718096; 
 }
 
 .Trailer h1 {
     color: #e9e9e9; 
 }
 
-/* Base responsive styles */
 @media screen and (max-width: 1200px) {
   .container {
     padding: 1rem;
@@ -489,7 +631,6 @@ article .text-xs span {
   }
 }
 
-/* For very small devices */
 @media screen and (max-width: 320px) {
   .character {
     width: 60px;
@@ -509,7 +650,6 @@ article .text-xs span {
   }
 }
 
-/*image dari resonator (characters.html)*/
 .portable-infobox.pi-background {
   background-color: #4e57741a;
 }
@@ -531,7 +671,6 @@ article .text-xs span {
     margin: 0 0 18px 18px;
 }
 
-/*tabel list karakter*/
 tbody {
   display: table-row-group;
   vertical-align: middle;
@@ -556,4 +695,122 @@ th {
 }
 tr:hover {
   background-color: #f1f1f1;
+}
+
+/* Header Style */
+header {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.logo-title {
+  display: flex;
+  width: auto;
+  align-items: center;
+  gap: 15px;
+}
+.logo-title img {
+  height: 100px;
+  width: auto;
+}
+
+nav ul.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.nav-list li a {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-weight: bold;
+}
+
+nav ul.nav-list li a:hover {
+  color: #3498db;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .header-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul.nav-list {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+}
+
+
+
+/* Style utama untuk blockquote */
+blockquote.pull-quote {
+  margin: 30px auto;
+  padding: 55px 30px;
+  font-style: normal;
+  background-color: #1c1e26; /* Warna latar sesuai contoh */
+  color: #ffffff; /* Teks putih */
+  border-left: 4px solid #00acee; /* Warna garis kiri */
+  border-radius: 5px; /* Membuat sudut membulat */
+  position: relative; /* Untuk posisi pseudo-element */
+}
+
+/* Gaya untuk teks utama */
+.pull-quote__text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  padding-right: 50px; /* Memberi ruang untuk tanda kutip kanan */
+  position: relative;
+}
+
+/* Gaya untuk sumber (Calcharo) di kiri bawah */
+blockquote.pull-quote cite {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 14px;
+  font-style: normal;
+  color: #7f8fa6; /* Warna teks sumber */
+  position: absolute;
+  bottom: 10px;
+  left: 30px; /* Geser agar sejajar dengan padding kiri */
+}
+
+/* Kutipan kiri */
+blockquote.pull-quote::before {
+  content: "“";
+  font-size: 50px;
+  color: #00acee;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: Georgia, serif;
+}
+
+/* Kutipan kanan di bawah */
+blockquote.pull-quote::after {
+  content: "”";
+  font-size: 50px;
+  color: #00acee;
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  font-family: Georgia, serif;
 }

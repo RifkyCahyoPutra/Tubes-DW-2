@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unofficial Wuthering Waves Wiki - Your comprehensive guide to characters, items, and more">
+    <meta name="theme-color" content="#2D3748">
+    <link rel="icon" href="asset/Wuthering Waves Icon.jpg">
     <link rel="stylesheet" href="input.css">
     <title>Wuthering Waves Wiki</title>
     
@@ -32,16 +35,23 @@
 
 <body>
     <header>
-        <h1>Welcome to Wuthering Waves Wiki!</h1>
-        <img src="Wuthering Waves logo.svg" alt="Site Logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="characters.html">CHARACTERS</a></li>
-                <li><a href="items.html">ITEMS</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <div class="logo-title">
+                <a accesskey="x" href="index.html">
+                    <img src="asset/Wuthering Waves logo.svg" width="480" height="270" alt="Wuthering Waves Wiki">
+                </a>
+                <h1>Wuthering Waves Wiki</h1>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="characters.html">CHARACTERS</a></li>
+                    <li><a href="items.html">ITEMS</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
 
     <main>
         <section>
@@ -74,8 +84,8 @@
         </section>
 
         <section>
-            <h2>Current Events</h2>
             <div class="container">
+                <h2>Current Events</h2>
                 <!-- Elemen besar di atas -->
                 <div class="featured">
                   <img src="https://wutheringwaves.gg/wp-content/uploads/sites/8/2024/11/featuredImage-9.jpg" alt="Featured Image">
@@ -91,7 +101,17 @@
                 <!-- Grid item kecil di bawah -->
                 <div class="grid">
                   <div class="card">
-                    <img src="https://scontent.fcgk18-1.fna.fbcdn.net/v/t39.30808-6/467599157_577018944884336_5203071483208312866_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEMJ9TSlFsyG3uIt4JIqj5MZoFQlKrcxtZmgVCUqtzG1n-IhE9JJ8aD0k13XMgb0DRtK8RskrEfZlJQrEesO2fZ&_nc_ohc=rp2u2TLVNYcQ7kNvgEQqRjH&_nc_zt=23&_nc_ht=scontent.fcgk18-1.fna&_nc_gid=Aj9dh5Zu6qe3frnCKuQFyIK&oh=00_AYDFjVwDzY7wZvUE3XGIhkZFyPNBuxA3_US_BxUMETuGCg&oe=6753D78D" alt="Image 1">
+                    <img src="Current Events/Pincer Maneuver Warriors II.jpg" alt="Event Pincer Maneuver Warriors II">
+                    <div class="content">
+                      <h3>Pincer Maneuver Warriors II</h3>
+                      <div class="date">December 12, 2024 to January 01, 2025</div>
+                      <p>A mysterious combat simulation program has gone viral on the Huoxu Hive at the Academy. And Lizhu, a chronically online researcher, asked you to take over her forum account.</p>
+                      <p>It seems like Lizhu's determined to take a break from scrolling to focus on her research. While you're taking over, perhaps it'll be interesting to see for yourself what the hype is about this ne simulation program that "groundbreakingly supports a two-team setup.</p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="Current Events/Beyond the Waves.jpg" alt="Event Beyond the Waves">
                     <div class="content">
                       <h3>Beyond the Waves</h3>
                       <div class="date">November 21, 2024 to December 05, 2024</div>
@@ -101,7 +121,7 @@
                   </div>
 
                   <div class="card">
-                    <img src="https://scontent.fcgk18-2.fna.fbcdn.net/v/t39.30808-6/466935419_574174288502135_7330702022495373530_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeG01bhUQOBjMuSQ97f42tnXmAOfdd6CM8qYA5913oIzygAnKwZH6Io0-cOva-qKcyZB2VBc1L8xkKJkYo7o4pm1&_nc_ohc=gyJQihBN5NAQ7kNvgEGcp-1&_nc_zt=23&_nc_ht=scontent.fcgk18-2.fna&_nc_gid=A_2KmJL1othRVOGE1FbLiIT&oh=00_AYD2ToiiadsrBsR1Cd0dVWfd4G9LQ6gKohwhkKFGpgX_tg&oe=6753BCFB" alt="Image 2">
+                    <img src="Current Events/Twitch Drops.jpg" alt="Event Twitch Drops">
                     <div class="content">
                       <h3>Twitch Drops</h3>
                       <div class="date">November 15, 2024 to December 13, 2024</div>
@@ -110,9 +130,9 @@
                         Watch Wuthering Waves-related streams on Twitch to win various rewards including Astrite! Make sure to link your Twitch account and Wuthering Waves account to receive the rewards.</p>
                     </div>
                   </div>
-                  
+
                   <div class="card">
-                    <img src="https://static.wikia.nocookie.net/wutheringwaves/images/d/d8/Depths_of_Illusive_Realm_Phantasm_Amass.jpg/revision/latest?cb=20241113124152" alt="Image 3">
+                    <img src="Current Events/Depths of Illusive Realm.jpg" alt="Event Depths of Illusive Realm: Phantasm Amass">
                     <div class="content">
                       <h3>Depths of Illusive Realm: Phantasm Amass</h3>
                       <div class="date">November 14, 2024 to January 01, 2025</div>
@@ -121,86 +141,105 @@
                   </div>
                 </div>
               </div>
-              
-              <body class="bg-gray-900 text-gray-100 font-sans">
-                <div class="container mx-auto p-6">
-                  <!-- Elemen besar di atas -->
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  </div>
             </section>
-    </main>
-
-    <section>
-        <div class="container">
-            <h1>Wuthering Waves Characters</h1>
-            <div class="characters">
-              <div class="character">
-                <img src="Character/Calcharo_Icon.webp" alt="Calcharo">
-                <div class="element Electro"></div>
-                <div class="name">Calcharo</div>
-              </div>
-              <div class="character">
-                <img src="Character/Camellya_Icon.webp" alt="Camellya">
-                <div class="element Havoc"></div>
-                <div class="name">Camellya</div>
-              </div>
-              <div class="character">
-                <img src="Character/Changli_Icon.webp" alt="Changli">
-                <div class="element Fusion"></div>
-                <div class="name">Changli</div>
-              </div>
-              <div class="character">
-                <img src="Character/Encore_Icon.webp" alt="Encore">
-                <div class="element Fusion"></div>
-                <div class="name">Encore</div>
-              </div>
-              <div class="character">
-                <img src="Character/Jianxin_Icon.webp" alt="Jianxin">
-                <div class="element Aero"></div>
-                <div class="name">Jianxin</div>
-              </div>
-              <div class="character">
-                <img src="Character/Jinhsi_Icon.webp" alt="Jinhsi">
-                <div class="element Spectro"></div>
-                <div class="name">Jinhsi</div>
-              </div>
-              <div class="character">
-                <img src="Character/Jiyan_Icon.webp" alt="Jiyan">
-                <div class="element Aero"></div>
-                <div class="name">Jiyan</div>
-              </div>
-              <div class="character">
-                <img src="Character/Lingyang_Icon.webp" alt="lingyang">
-                <div class="element Glacio"></div>
-                <div class="name">Lingyang</div>
-              </div>
-              
-              
+        </main>
+        
+        <section>
+            <div class="container">
+                <h1>Wuthering Waves Characters</h1>
+                <div class="characters">
+                    <div class="character">
+                        <img src="Character Icon/Calcharo_Icon.webp" alt="Calcharo" loading="lazy">
+                        <div class="element Electro"></div>
+                        <div class="name">Calcharo</div>
+                    </div>
+                    <div class="character">
+                        <img src="Character Icon/Camellya_Icon.webp" alt="Camellya" loading="lazy">
+                        <div class="element Havoc"></div>
+                        <div class="name">Camellya</div>
+                    </div>
+                    <div class="character">
+                        <img src="Character Icon/Changli_Icon.webp" alt="Changli" loading="lazy">
+                        <div class="element Fusion"></div>
+                        <div class="name">Changli</div>
+                    </div>
+                    <div class="character">
+                        <img src="Character Icon/Encore_Icon.webp" alt="Encore" loading="lazy">
+                        <div class="element Fusion"></div>
+                        <div class="name">Encore</div>
+                    </div>
+                    <div class="character">
+                        <img src="Character Icon/Jianxin_Icon.webp" alt="Jianxin" loading="lazy">
+                        <div class="element Aero"></div>
+                        <div class="name">Jianxin</div>
+                    </div>
+                    <div class="character">
+                        <img src="Character Icon/Jinhsi_Icon.webp" alt="Jinhsi" loading="lazy">
+                        <div class="element Spectro"></div>
+                        <div class="name">Jinhsi</div>
+                    </div>
+                    <div class="character">
+                        <img src="Character Icon/Jiyan_Icon.webp" alt="Jiyan" loading="lazy">
+                        <div class="element Aero"></div>
+                        <div class="name">Jiyan</div>
+                    </div>
+                    <div class="character">
+                        <img src="Character Icon/Lingyang_Icon.webp" alt="Lingyang" loading="lazy">
+                        <div class="element Glacio"></div>
+                        <div class="name">Lingyang</div>
+                    </div>
+                </div>
             </div>
-          </div>
-    </section>
+        </section>
+  
+  <!-- New Items Section -->
+  <section>
+    <div class="container">
+        <h1>Wuthering Waves Items</h1>
+        <div class="items" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; padding: 20px 0;">
+            <div class="item" style="border: 1px solid #ccc; border-radius: 8px; text-align: center; padding: 10px; background: #f9f9f9; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <img src="assets/Items/Healing_Potion.webp" alt="Healing Potion" loading="lazy" style="width: 100px; height: auto; margin-bottom: 10px;">
+                <div class="name" style="font-weight: bold; font-size: 1.1rem; margin-bottom: 5px;">Healing Potion</div>
+                <div class="description" style="font-size: 0.9rem; color: #555;">Restores 50% of max health.</div>
+            </div>
+            <div class="item" style="border: 1px solid #ccc; border-radius: 8px; text-align: center; padding: 10px; background: #f9f9f9; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <img src="assets/Items/Mana_Potion.webp" alt="Mana Potion" loading="lazy" style="width: 100px; height: auto; margin-bottom: 10px;">
+                <div class="name" style="font-weight: bold; font-size: 1.1rem; margin-bottom: 5px;">Mana Potion</div>
+                <div class="description" style="font-size: 0.9rem; color: #555;">Restores 30% of max mana.</div>
+            </div>
+            <div class="item" style="border: 1px solid #ccc; border-radius: 8px; text-align: center; padding: 10px; background: #f9f9f9; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <img src="assets/Items/Attack_Amulet.webp" alt="Attack Amulet" loading="lazy" style="width: 100px; height: auto; margin-bottom: 10px;">
+                <div class="name" style="font-weight: bold; font-size: 1.1rem; margin-bottom: 5px;">Attack Amulet</div>
+                <div class="description" style="font-size: 0.9rem; color: #555;">Increases attack power by 15% for 5 minutes.</div>
+            </div>
+            <div class="item" style="border: 1px solid #ccc; border-radius: 8px; text-align: center; padding: 10px; background: #f9f9f9; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <img src="assets/Items/Defense_Ring.webp" alt="Defense Ring" loading="lazy" style="width: 100px; height: auto; margin-bottom: 10px;">
+                <div class="name" style="font-weight: bold; font-size: 1.1rem; margin-bottom: 5px;">Defense Ring</div>
+                <div class="description" style="font-size: 0.9rem; color: #555;">Boosts defense by 10% for 10 minutes.</div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
     <footer>
         <p>&copy; 2024 Wuthering Waves Wiki. All rights reserved.</p>
     </footer>
 
-    <!-- Add JavaScript to load videos -->
     <script>
-        // Array of video IDs
         const videoIds = [
-            'xOn_aOXq1ZY',  // Opening Cinematics
-            'R8htow_6tRc',  // Global Launch Trailer
-            '4i1IRQ6SGTM',  // SAVING LIGHT
-            'LS0XD_nEtdw'   // Version 1.4
+            'xOn_aOXq1ZY',  
+            'R8htow_6tRc',  
+            '4i1IRQ6SGTM',  
+            'LS0XD_nEtdw'   
         ];
 
         function initMap() {
-            // Initialize YouTube API
+            
             const container = document.getElementById('videoContainer');
             
             videoIds.forEach(videoId => {
-                // Create request to get video details
+                
                 gapi.client.youtube.videos.list({
                     part: 'snippet,statistics',
                     id: videoId
@@ -237,7 +276,6 @@
             return article;
         }
 
-        // Load YouTube API
         function loadYouTubeAPI() {
             gapi.client.init({
                 'apiKey': 'AIzaSyDHGWNPyje67GIDF1eeLV089Az0JyYdj2w',
@@ -247,7 +285,6 @@
             }).catch(err => console.error('Error initializing YouTube API:', err));
         }
 
-        // Add YouTube API client library
         const script = document.createElement('script');
         script.src = 'https://apis.google.com/js/api.js';
         script.onload = () => {
