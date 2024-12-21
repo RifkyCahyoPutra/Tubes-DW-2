@@ -1,5 +1,4 @@
 {
     "search.useGlobalIgnoreFiles": true,
-    "search.useParentIgnoreFiles": true,
-    "liveServer.settings.port": 5501
+    "search.useParentIgnoreFiles": true
 }
