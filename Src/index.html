@@ -195,17 +195,30 @@
             '3qNYdLGJjzI'
         ];
 
+        const cache = new Map();
+
+        function fetchVideoData(videoId) {
+            if (cache.has(videoId)) {
+                return Promise.resolve(cache.get(videoId));
+            }
+            
+            return gapi.client.youtube.videos.list({
+                part: 'snippet,statistics',
+                id: videoId
+            }).then(response => {
+                const data = response.result.items[0];
+                cache.set(videoId, data);
+                return data;
+            });
+        }
+
         function initMap() {
             
             const container = document.getElementById('videoContainer');
             
             videoIds.forEach(videoId => {
                 
-                gapi.client.youtube.videos.list({
-                    part: 'snippet,statistics',
-                    id: videoId
-                }).then(response => {
-                    const video = response.result.items[0];
+                fetchVideoData(videoId).then(video => {
                     const article = createVideoArticle(video);
                     container.appendChild(article);
                 }).catch(err => console.error('Error loading video:', err));
@@ -252,6 +265,8 @@
             gapi.load('client', loadYouTubeAPI);
         };
         document.head.appendChild(script);
+
+        const API_KEY = process.env.YOUTUBE_API_KEY;
     </script>
 </body>
 </html>
