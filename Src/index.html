@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="asset/Wuthering Waves Icon.jpg">
     <link rel="stylesheet" href="input.css">
     <title>Wuthering Waves Wiki</title>
     
@@ -37,7 +38,6 @@
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="characters.html">CHARACTERS</a></li>
-                <li><a href="items.html">ITEMS</a></li>
             </ul>
         </nav>
     </header>
@@ -55,7 +55,7 @@
                   <li><a href="https://discord.gg/wutheringwaves">Discord</a></li>
               </ul>
           </nav>
-            <p><strong><em><a href="https://en.wikipedia.org/wiki/Wuthering_Waves">Wuthering Waves</a></em> is a story-rich open-world action RPG with a high degree of freedom from <a href="https://en.wikipedia.org/wiki/Kuro_Games">Kuro Game</a>. You wake from your slumber as <a href="/wiki/Rover">Rover</a>, joined by a vibrant cast of <a href="/wiki/Resonators">Resonators</a> on a journey to reclaim your lost memories and surmount <a href="/wiki/The_Lament">the Lament</a>.</strong></p>
+            <p><strong><em><a href="https://en.wikipedia.org/wiki/Wuthering_Waves">Wuthering Waves</a></em> is a story-rich open-world action RPG with a high degree of freedom from <a href="https://en.wikipedia.org/wiki/Kuro_Games">Kuro Game</a>. You wake from your slumber as <a href="https://wutheringwaves.fandom.com/wiki/Rover">Rover</a>, joined by a vibrant cast of <a href="https://wutheringwaves.fandom.com/wiki/Resonator">Resonators</a> on a journey to reclaim your lost memories and surmount <a href="https://wutheringwaves.fandom.com/wiki/The_Lament">the Lament</a>.</strong></p>
             <p><strong>This wiki is an unofficial English resource for information about the global version of the game, and currently has <strong>2,787 articles</strong> and <strong>16,200 images & videos.</strong></strong></p>
         </section>
 
@@ -107,6 +107,24 @@
                       <p>To encourage the Pioneers to further share their Jinzhou explorations, Lollo Logistics has partnered with the Pioneer Association to proudly present the campaign: Beyond the Waves!
                         Participate and upload your exploration record at the Lollo courier truck to get various rewards!</p>
                     </div>
+                  </div> 
+                  
+                  <div class="card">
+                    <img src="https://img.game8.co/4048477/777052410692a0e087aca1d211b595a7.png/show" alt="Version 2.0">
+                    <div class="content">
+                      <h3>Version 2.0</h3>
+                      <div class="date">Releases on January 2, 2025</div>
+                      <p>Wuthering Waves Version 2.0 will be released on January 2, 2025. Learn more about Version 2.0's release date, the new region of Rinascita, all banners, weapons, features, quality of life (QOL) changes, and more!</p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="https://img.game8.co/4071468/0f68ec0eb05057c9c3e984c6bf47f3c5.png/show  " alt="Rinascita Echo Fiesta">
+                    <div class="content">
+                      <h3>Rinascita Echo Fiesta</h3>
+                      <div class="date">December 19, 2024-January 19, 2025</div>
+                      <p>Rinascita Echo Fiesta is a card-collecting web event that will task players to collect as many Rinascita echo cards as possible to get rewards like Astrites, enhancement materials, and a Malleable Elite Class Echo item for Version 2.0!</p>
+                    </div>
                   </div>
 
                   <div class="card">
@@ -130,6 +148,7 @@
                   </div>
                 </div>
               </div>
+              
               
               <body class="bg-gray-900 text-gray-100 font-sans">
                 <div class="container mx-auto p-6">
@@ -188,11 +207,30 @@
 
     <script>
         const videoIds = [
-            'xOn_aOXq1ZY',  
-            'R8htow_6tRc',  
-            '4i1IRQ6SGTM',  
-            'LS0XD_nEtdw'   
+            'SdUgFGx1kOY',  
+            'zgku-CB9Xj8',  
+            '9ZJ7NisvTlY',  
+            'x7jDodMbOG4',
+            'wp4fdbuKw34',
+            '3qNYdLGJjzI'
         ];
+
+        const cache = new Map();
+
+        function fetchVideoData(videoId) {
+            if (cache.has(videoId)) {
+                return Promise.resolve(cache.get(videoId));
+            }
+            
+            return gapi.client.youtube.videos.list({
+                part: 'snippet,statistics',
+                id: videoId
+            }).then(response => {
+                const data = response.result.items[0];
+                cache.set(videoId, data);
+                return data;
+            });
+        }
 
         function initMap() {
             
@@ -200,11 +238,7 @@
             
             videoIds.forEach(videoId => {
                 
-                gapi.client.youtube.videos.list({
-                    part: 'snippet,statistics',
-                    id: videoId
-                }).then(response => {
-                    const video = response.result.items[0];
+                fetchVideoData(videoId).then(video => {
                     const article = createVideoArticle(video);
                     container.appendChild(article);
                 }).catch(err => console.error('Error loading video:', err));
@@ -251,6 +285,8 @@
             gapi.load('client', loadYouTubeAPI);
         };
         document.head.appendChild(script);
+
+        const API_KEY = process.env.YOUTUBE_API_KEY;
     </script>
 </body>
 </html>
